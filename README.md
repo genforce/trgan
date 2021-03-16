@@ -26,7 +26,7 @@ In this repository, we propose an unsupervised learning framework, termed as TrG
 | Source | Target | Sample 1 | Sample 2 | Sample 3
 | ![image](./docs/assets/pre_cloud.jpg) | ![image](./docs/assets/post_cloud.jpg) | ![image](./docs/assets/cloud_1.gif) | ![image](./docs/assets/cloud_2.gif) | ![image](./docs/assets/cloud_3.gif)
 
-| Changing Shape | | | | |
+| Altering Shape | | | | |
 | :-: | :-: | :-: | :-: | :-: |
 | Source | Target | Sample 1 | Sample 2 | Sample 3
 | ![image](./docs/assets/pre_shape.jpg) | ![image](./docs/assets/post_shape.jpg) | ![image](./docs/assets/shape_1.gif) | ![image](./docs/assets/shape_2.gif) | ![image](./docs/assets/shape_3.gif)
