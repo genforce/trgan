@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>TrGAN</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="logo">
+      <a href="https://genforce.github.io/" target="_blank"><img src="./assets/genforce.png"></a>
+    </div>
+    <div class="title", style="padding-top: 10pt;">
+      Unsupervised Image Transformation Learning via Generative Adversarial Networks
+    </div>
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <a href="http://kaiwenzha.github.io" target="_blank">Kaiwen Zha</a><sup>1</sup>,&nbsp;
+    <a href="http://shenyujun.github.io" target="_blank">Yujun Shen</a><sup>2</sup>,&nbsp;
+    <a href="http://bzhou.ie.cuhk.edu.hk" target="_blank">Bolei Zhou</a><sup>2</sup>
+  </div>
+  <div class="institution">
+    <sup>1</sup> MIT CSAIL <br>
+    <sup>2</sup> The Chinese University of Hong Kong
+  </div>
+  <div class="link">
+    <a href="https://arxiv.org/pdf/2103.07751.pdf" target="_blank">[Paper]</a>&nbsp;
+    <a href="https://github.com/genforce/trgan" target="_blank">[Code]</a>
+  </div>
+  <div class="teaser">
+    <img src="./assets/teaser.png">
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+    In this work, we study the image transformation problem by learning the underlying transformations from a collection of images using Generative Adversarial Networks (GANs). Specifically, we propose an unsupervised learning framework, termed as TrGAN, to project images onto a transformation space that is shared by the generator and the discriminator. Any two points in this projected space define a transformation that can guide the image generation process. By projecting a pair of images onto the transformation space, TrGAN is able to adequately extract the semantic variation between them and further apply the extracted semantic to facilitating image editing, including not only transferring image styles (e.g., changing day to night) but also manipulating image contents (e.g., adding clouds in the sky).
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Results</div>
+  <div class="body">
+    The transformations extracted from the image pairs are applied to transforming new images.
+    <!-- Adjust the number of rows and columns (EVERY project differs). -->
+    <table width="100%" style="margin: 15pt auto; text-align: center;">
+      <tr>
+        <td colspan="2" style="padding-bottom: 2pt; padding-top: 2pt;"><b>Input Pair</b></td>
+        <td></td>
+        <td colspan="3" style="padding-left: 5pt;"><b>Transforming</b></td>
+      </tr>
+      <tr>
+          <td><img src="./assets/pre_season.jpg" width="95%"></img></td>
+          <td><img src="./assets/post_season.jpg" width="95%"></img></td>
+          <td width="15px" style="border-right: 2px dashed black;"></td>
+          <td width="15px"></td>
+          <td><img src="./assets/season_1.gif" width="95%"></img></td>
+          <td><img src="./assets/season_2.gif" width="95%"></img></td>
+          <td><img src="./assets/season_3.gif" width="95%"></img></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="padding-bottom: 2pt; padding-top: 2pt;"><b>Season</b></td>
+        <!-- <td width="15px" style="border-right: 2px dashed black;"></td> -->
+      <tr>
+        <td><img src="./assets/pre_cloud.jpg" width="95%"></img></td>
+        <td><img src="./assets/post_cloud.jpg" width="95%"></img></td>
+        <td width="15px" style="border-right: 2px dashed black;"></td>
+        <td width="15px"></td>
+        <td><img src="./assets/cloud_1.gif" width="95%"></img></td>
+        <td><img src="./assets/cloud_2.gif" width="95%"></img></td>
+        <td><img src="./assets/cloud_3.gif" width="95%"></img></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="padding-bottom: 2pt; padding-top: 2pt;"><b>Cloud</b></td>
+        <!-- <td width="15px" style="border-right: 2px dashed black;"></td> -->
+      <tr>
+      <tr>
+        <td><img src="./assets/pre_shape.jpg" width="95%"></img></td>
+        <td><img src="./assets/post_shape.jpg" width="95%"></img></td>
+        <td width="15px" style="border-right: 2px dashed black;"></td>
+        <td width="15px"></td>
+        <td><img src="./assets/shape_1.gif" width="95%"></img></td>
+        <td><img src="./assets/shape_2.gif" width="95%"></img></td>
+        <td><img src="./assets/shape_3.gif" width="95%"></img></td>
+      </tr>
+      <tr>
+        <td colspan="2" style="padding-bottom: 2pt; padding-top: 2pt;"><b>Shape</b></td>
+      <tr>
+    </table>
+
+    Demo video here.
+
+    <!-- Adjust the frame size based on the demo (EVERY project differs). -->
+    <div style="position: relative; padding-top: 50%; margin: 20pt 0; text-align: center;">
+      <iframe src="https://www.youtube.com/embed/ZTYLihZYwYM" frameborder=0
+              style="position: absolute; top: 2.5%; left: 7.5%; width: 85%; height: 100%;"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+  @article{zha2021unsupervised,
+    title   = {Unsupervised Image Transformation Learning via Generative Adversarial Networks},
+    author  = {Zha, Kaiwen and Shen, Yujun and Zhou, Bolei},
+    journal = {arXiv preprint arXiv:2103.07751},
+    year    = {2021}
+  }
+</pre>
+
+  <!-- BZ: we should give other related work enough credits, -->
+  <!--     so please include some most relevant work and leave some comment to summarize work and the difference. -->
+  <div class="ref">Related Work</div>
+  <div class="citation">
+    <div class="image"><img src="./assets/transient.jpg"></div>
+    <div class="comment">
+      <a href="http://transattr.cs.brown.edu/" target="_blank">
+        P.Y. Laffont, Z. Ren, X. Tao, C. Qian, J. Hays.
+        Transient Attributes for High-Level Understanding and Editing of Outdoor Scenes.
+        SIGGRAPH 2014.</a><br>
+      <b>Comment:</b>
+      Defines 40 transient attributes and proposes an image editing method that can adjust the attributes of a scene based on regressors trained on on labeled data.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/stylegan.jpg"></div>
+    <div class="comment">
+      <a href="https://github.com/NVlabs/stylegan" target="_blank">
+        T. Karras, S. Laine, T. Aila.
+        A Style-Based Generator Architecture for Generative Adversarial Networks.
+        CVPR 2019.</a><br>
+      <b>Comment:</b>
+      Proposes a style-based generator for high-quality image synthesis.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/image2stylegan.jpg"></div>
+    <div class="comment">
+      <a href="https://arxiv.org/pdf/1904.03189.pdf" target="_blank">
+        R. Abdal, Y. Qin, P. Wonka.
+        Image2StyleGAN: How to Embed Images Into the StyleGAN Latent Space?.
+        ICCV 2019.</a><br>
+      <b>Comment:</b>
+      Explores how to embed images into the latent space of StyleGAN.
+    </div>
+  </div>
+  <div class="citation">
+    <div class="image"><img src="./assets/photowct.jpg"></div>
+    <div class="comment">
+      <a href="https://github.com/NVIDIA/FastPhotoStyle" target="_blank">
+        Y. Li, M.Y. Liu, X. Li, M.H. Yang, J. Kautz.
+        A Closed-form Solution to Photorealistic Image Stylization.
+        ECCV 2018.</a><br>
+      <b>Comment:</b>
+      Proposes an approach for photorealistic image stylization.
+    </div>
+  </div>
+</div>
+<!-- === Reference Section Ends === -->
+
+
+</body>
+</html>
